@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmed Fateh</title>
+  <title>Ahmed Ameen Fateh</title>
+
   <style>
     body {
       margin: 0;
@@ -11,7 +12,7 @@
       background: #ffffff;
       color: #111;
       font-family: "Times New Roman", Times, serif;
-      line-height: 1.35;
+      line-height: 1.4;
     }
 
     .container {
@@ -21,57 +22,35 @@
 
     .top-section {
       display: flex;
-      align-items: flex-start;
       gap: 24px;
       margin-bottom: 40px;
     }
 
     .profile-photo {
       width: 210px;
-      height: auto;
-      object-fit: cover;
       border: 1px solid #ccc;
     }
 
-    .profile-info {
-      flex: 1;
-    }
-
     .name-line {
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    .name-line a {
-      color: #0033cc;
-      text-decoration: none;
+      font-size: 24px;
       font-weight: bold;
-    }
-
-    .name-line a:hover {
-      text-decoration: underline;
+      color: #0033cc;
     }
 
     .title {
       font-size: 18px;
       font-style: italic;
-      font-weight: bold;
-      margin-bottom: 22px;
+      margin: 10px 0 20px 0;
     }
 
     .affiliation a {
       color: #0033cc;
       text-decoration: none;
-      font-size: 18px;
       font-weight: bold;
     }
 
-    .affiliation a:hover {
-      text-decoration: underline;
-    }
-
     .contact {
-      margin-top: 22px;
+      margin-top: 15px;
       font-size: 16px;
     }
 
@@ -80,49 +59,30 @@
       text-decoration: none;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
     .section {
-      margin-top: 18px;
+      margin-top: 25px;
     }
 
     .section-title {
       font-size: 28px;
       color: #a52a2a;
       font-weight: bold;
-      margin-bottom: 8px;
     }
 
-    .section hr {
+    hr {
       border: none;
-      border-top: 1px solid #bdbdbd;
-      margin: 0 0 12px 0;
+      border-top: 1px solid #ccc;
+      margin: 10px 0;
     }
 
     .news-list {
-      margin: 0;
-      padding-left: 34px;
-      font-size: 18px;
-    }
-
-    .news-list li {
-      margin-bottom: 14px;
+      padding-left: 25px;
+      font-size: 17px;
     }
 
     .date {
-      color: #d62828;
+      color: red;
       font-weight: bold;
-    }
-
-    .readmore {
-      background: #d9d9d9;
-      color: #444;
-      padding: 10px 14px;
-      font-size: 16px;
-      font-weight: bold;
-      margin: 12px 0 8px 0;
     }
 
     .about-text {
@@ -130,15 +90,8 @@
       text-align: justify;
     }
 
-    .about-text p {
-      margin-top: 0;
-      margin-bottom: 18px;
-    }
-
-    @media (max-width: 1150px) {
-      .container {
-        width: 92%;
-      }
+    .pub-list li {
+      margin-bottom: 15px;
     }
 
     @media (max-width: 700px) {
@@ -146,90 +99,122 @@
         flex-direction: column;
       }
 
-      .profile-photo {
-        width: 180px;
+      .container {
+        width: 92%;
       }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
 
-    <div class="top-section">
-  <img src="profile.jpg" alt="Ahmed Fateh" class="profile-photo" />
+<div class="container">
 
-  <div class="profile-info">
-    <div class="name-line">
-  <a href="#">Ahmed Ameen Fateh</a>
-</div>
+<!-- ================= HEADER ================= -->
+<div class="top-section">
 
+  <img src="profile.jpg" class="profile-photo" />
+
+  <div>
+    <div class="name-line">Ahmed Ameen Fateh</div>
     <div class="title">Ph.D. | Research Fellow</div>
 
     <div class="affiliation">
-      <a href="#">Hainan University</a><br />
+      <a href="#">Hainan University</a><br>
       <a href="#">Sanya, Hainan, China</a>
     </div>
 
     <div class="contact">
-      <strong>Email:</strong> Eng.ahmed.a.d@outlook.com<br />
-      [<a href="https://scholar.google.com/citations?user=CFpfmQkAAAAJ&hl=en" target="_blank">Google Scholar</a>]
-      [<a href="https://github.com/ahmedfateh" target="_blank">GitHub</a>]
-      [<a href="https://www.researchgate.net/profile/Ahmed-Fateh" target="_blank">ResearchGate</a>]
-      [<a href="https://orcid.org/0000-0001-6126-274X" target="_blank">ORCID</a>]
-      [<a href="cv.pdf" target="_blank">CV</a>]<br />
+      <strong>Email:</strong> Eng.ahmed.a.d@outlook.com<br>
+
+      [<a href="https://scholar.google.com/citations?user=CFpfmQkAAAAJ" target="_blank">Google Scholar</a>] &nbsp;
+      [<a href="https://github.com/ahmedfateh" target="_blank">GitHub</a>] &nbsp;
+      [<a href="https://www.researchgate.net/profile/Ahmed-Fateh" target="_blank">ResearchGate</a>] &nbsp;
+      [<a href="https://orcid.org/0000-0001-6126-274X" target="_blank">ORCID</a>] &nbsp;
+      [<a href="cv.pdf" target="_blank">CV</a>]
+
+      <br>
       <strong>Address:</strong> Sanya, Hainan, China
-  
-        </div>
-      </div>
     </div>
-
-    <div class="section">
-      <div class="section-title">📅 News</div>
-      <hr />
-      <ul class="news-list">
-        <li>
-          <span class="date">[2025.02]</span>
-          Our paper on frequency-specific functional connectivity patterns in ADHD was published in
-          <em>BMC Psychiatry</em>.
-        </li>
-      </ul>
-
-      <div class="readmore">👉 Read More</div>
-
-      <ul class="news-list">
-        <li>
-          <span class="date">[2024.10]</span>
-          Our work on the salience network in pediatric BECTS-ESES was published in
-          <em>Progress in Neuro-Psychopharmacology & Biological Psychiatry</em>.
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <div class="section-title">😉 About Me</div>
-      <hr />
-      <div class="about-text">
-        <p>
-          Ahmed Ameen Fateh received the B.Sc. degree in Biomedical Engineering from the Lebanese
-          International University, Yemen, the M.Sc. degree in Biomedical Engineering from the
-          University of Electronic Science and Technology of China, and the Ph.D. degree in Biomedical
-          Engineering from the same institution.
-        </p>
-
-        <p>
-          He worked as a Research Fellow in the Department of Radiology at Shenzhen Children’s
-          Hospital, Shenzhen, China. His research focuses on neuroimaging, resting-state fMRI,
-          machine learning, dynamic functional connectivity, and computational psychiatry.
-        </p>
-
-        <p>
-          His current academic interests include brain connectivity analysis in psychiatric and
-          neurological disorders, the integration of neuroimaging with machine learning models, and
-          translational applications in mental health research.
-        </p>
-      </div>
-    </div>
-
   </div>
+
+</div>
+
+<!-- ================= RESEARCH ================= -->
+<div class="section">
+  <div class="section-title">🧠 Research Interests</div>
+  <hr>
+  <div class="about-text">
+    Neuroimaging, resting-state fMRI, dynamic functional connectivity,
+    machine learning in psychiatry, computational psychiatry,
+    ADHD, epilepsy, mood disorders, and brain connectivity analysis.
+  </div>
+</div>
+
+<!-- ================= PUBLICATIONS ================= -->
+<div class="section">
+  <div class="section-title">📚 Selected Publications</div>
+  <hr>
+
+  <ul class="news-list pub-list">
+    <li><b>Frequency-Specific Functional Connectivity Patterns in ADHD</b><br>
+    <em>BMC Psychiatry</em>, 2025</li>
+
+    <li><b>Salience Network in Pediatric BECTS-ESES</b><br>
+    <em>Progress in Neuro-Psychopharmacology</em>, 2024</li>
+
+    <li><b>Default Mode Network and ADHD</b><br>
+    <em>International Journal of Clinical and Health Psychology</em>, 2023</li>
+
+    <li><b>Insular Dynamic Functional Connectivity in ADHD</b><br>
+    <em>Frontiers in Neuroscience</em>, 2022</li>
+
+    <li><b>Hippocampal Connectivity in Mood Disorders</b><br>
+    <em>Psychiatry Research: Neuroimaging</em></li>
+
+    <li><b>Low-Frequency Fluctuations in Epilepsy</b><br>
+    <em>Journal of Clinical Neuroscience</em>, 2024</li>
+  </ul>
+</div>
+
+<!-- ================= CERTIFICATES ================= -->
+<div class="section">
+  <div class="section-title">📜 Licenses & Certifications</div>
+  <hr>
+
+  <ul class="news-list">
+    <li>
+      <b>Hainan Free Trade Port (HFTP) Talent Certificate</b><br>
+      Issued Sep 2025
+    </li>
+
+    <li>
+      <b>High-Level Talent Certificate – Sanya Yazhou Bay</b><br>
+      Issued Dec 2025
+    </li>
+  </ul>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="section">
+  <div class="section-title">😉 About Me</div>
+  <hr>
+
+  <div class="about-text">
+    <p>
+      Ahmed Ameen Fateh received his Ph.D. in Biomedical Engineering.
+      His research focuses on neuroimaging, resting-state fMRI,
+      machine learning, and computational psychiatry.
+    </p>
+
+    <p>
+      His work explores brain connectivity patterns in psychiatric
+      and neurological disorders, aiming to develop data-driven
+      diagnostic and predictive models.
+    </p>
+  </div>
+</div>
+
+</div>
 </body>
 </html>
