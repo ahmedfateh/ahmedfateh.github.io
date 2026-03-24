@@ -4,217 +4,385 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahmed Ameen Fateh</title>
-
   <style>
+    :root {
+      --primary: #1f4fbf;
+      --accent: #9f2f2f;
+      --text: #1b1b1b;
+      --muted: #666;
+      --line: #d9d9d9;
+      --soft: #f7f8fb;
+      --card: #ffffff;
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      padding: 0;
-      background: #ffffff;
-      color: #111;
+      background: #f4f6fa;
+      color: var(--text);
       font-family: "Times New Roman", Times, serif;
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     .container {
-      width: 1100px;
-      margin: 30px auto;
+      max-width: 1120px;
+      margin: 36px auto;
+      padding: 0 20px 40px;
     }
 
-    .top-section {
+    .hero {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 28px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+
+    .photo-wrap {
       display: flex;
-      gap: 24px;
-      margin-bottom: 40px;
+      justify-content: center;
+      align-items: flex-start;
     }
 
     .profile-photo {
-      width: 210px;
-      border: 1px solid #ccc;
+      width: 220px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid #d8d8d8;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+      background: #fff;
     }
 
-    .name-line {
-      font-size: 24px;
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .name {
+      font-size: 2.1rem;
       font-weight: bold;
-      color: #0033cc;
+      color: var(--primary);
+      margin: 0 0 8px;
     }
 
     .title {
-      font-size: 18px;
+      font-size: 1.25rem;
       font-style: italic;
-      margin: 10px 0 20px 0;
+      font-weight: bold;
+      margin-bottom: 18px;
     }
 
-    .affiliation a {
-      color: #0033cc;
-      text-decoration: none;
+    .affiliation {
+      font-size: 1.25rem;
+      color: var(--primary);
       font-weight: bold;
+      margin-bottom: 18px;
+      line-height: 1.45;
     }
 
     .contact {
-      margin-top: 15px;
-      font-size: 16px;
+      font-size: 1.06rem;
+      margin-bottom: 14px;
     }
 
-    .contact a {
-      color: #0033cc;
+    .contact strong {
+      font-weight: bold;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 8px 0 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid #cfd7ea;
+      border-radius: 999px;
       text-decoration: none;
+      color: var(--primary);
+      background: #f8fbff;
+      font-size: 0.98rem;
+      transition: 0.2s ease;
     }
 
-    .section {
-      margin-top: 25px;
+    .btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .address {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px 24px;
+    }
+
+    .card.full {
+      grid-column: 1 / -1;
     }
 
     .section-title {
-      font-size: 28px;
-      color: #a52a2a;
+      margin: 0 0 14px;
+      font-size: 1.8rem;
+      color: var(--accent);
       font-weight: bold;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
     }
 
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 10px 0;
-    }
-
-    .news-list {
-      padding-left: 25px;
-      font-size: 17px;
-    }
-
-    .date {
-      color: red;
-      font-weight: bold;
-    }
-
-    .about-text {
-      font-size: 18px;
+    .about-text,
+    .plain-text {
+      font-size: 1.08rem;
       text-align: justify;
     }
 
-    .pub-list li {
-      margin-bottom: 15px;
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    @media (max-width: 700px) {
-      .top-section {
-        flex-direction: column;
+    .chip {
+      background: var(--soft);
+      border: 1px solid #e2e7f0;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.98rem;
+    }
+
+    .pub-list,
+    .cert-list {
+      margin: 0;
+      padding-left: 22px;
+      font-size: 1.04rem;
+    }
+
+    .pub-list li,
+    .cert-list li {
+      margin-bottom: 14px;
+    }
+
+    .pub-title,
+    .cert-title {
+      font-weight: bold;
+    }
+
+    .journal {
+      font-style: italic;
+      color: #333;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .highlight {
+      color: #c93333;
+      font-weight: bold;
+    }
+
+    .news-item {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    .news-date {
+      color: #c93333;
+      font-weight: bold;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
       }
 
-      .container {
-        width: 92%;
+      .photo-wrap {
+        justify-content: flex-start;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .name {
+        font-size: 1.7rem;
+      }
+
+      .title,
+      .affiliation {
+        font-size: 1.1rem;
+      }
+
+      .profile-photo {
+        width: 180px;
+        height: 220px;
       }
     }
   </style>
 </head>
-
 <body>
+  <div class="container">
 
-<div class="container">
+    <section class="hero">
+      <div class="photo-wrap">
+        <img src="profile.jpg" alt="Ahmed Ameen Fateh" class="profile-photo" />
+      </div>
 
-<!-- ================= HEADER ================= -->
-<div class="top-section">
+      <div class="hero-right">
+        <h1 class="name">Ahmed Ameen Fateh</h1>
+        <div class="title">Ph.D. | Research Fellow</div>
 
-<img src="profile.jpg" class="profile-photo" />
+        <div class="affiliation">
+          Hainan University<br>
+          Sanya, Hainan, China
+        </div>
 
-  <div>
-    <div class="name-line">Ahmed Ameen Fateh</div>
-    <div class="title">Ph.D. | Research Fellow</div>
+        <div class="contact">
+          <strong>Email:</strong> Eng.ahmed.a.d@outlook.com
+        </div>
 
-    <div class="affiliation">
-      <a href="#">Hainan University</a><br>
-      <a href="#">Sanya, Hainan, China</a>
+        <div class="button-row">
+          <a class="btn" href="https://scholar.google.com/citations?user=CFpfmQkAAAAJ" target="_blank">Google Scholar</a>
+          <a class="btn" href="https://github.com/ahmedfateh" target="_blank">GitHub</a>
+          <a class="btn" href="https://www.researchgate.net/profile/Ahmed-Fateh" target="_blank">ResearchGate</a>
+          <a class="btn" href="https://orcid.org/0000-0001-6126-274X" target="_blank">ORCID</a>
+          <a class="btn" href="Ahmed_CV.pdf" target="_blank">Download CV</a>
+        </div>
+
+        <div class="address">
+          <strong>Address:</strong> Sanya, Hainan, China
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card full">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-text">
+          <p>
+            Ahmed Ameen Fateh is a researcher in biomedical engineering whose work focuses on neuroimaging,
+            resting-state fMRI, machine learning, dynamic functional connectivity, and computational psychiatry.
+            His research aims to identify biologically meaningful brain connectivity markers for psychiatric and
+            neurological disorders and to develop data-driven models for diagnosis and prediction.
+          </p>
+          <p>
+            He received his B.Sc. degree in Biomedical Engineering from the Lebanese International University,
+            Yemen, and his M.Sc. and Ph.D. degrees in Biomedical Engineering from the University of Electronic
+            Science and Technology of China. His academic interests include translational neuroimaging research,
+            machine learning in mental health, and brain-network analysis across developmental and clinical populations.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="chips">
+          <div class="chip">Neuroimaging</div>
+          <div class="chip">Resting-state fMRI</div>
+          <div class="chip">Dynamic Functional Connectivity</div>
+          <div class="chip">Machine Learning in Psychiatry</div>
+          <div class="chip">Computational Psychiatry</div>
+          <div class="chip">ADHD</div>
+          <div class="chip">Epilepsy</div>
+          <div class="chip">Mood Disorders</div>
+          <div class="chip">Brain Connectivity Analysis</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">News</h2>
+        <div class="news-item">
+          <span class="news-date">[2025.02]</span>
+          Frequency-specific functional connectivity patterns in ADHD published in
+          <span class="journal">BMC Psychiatry</span>.
+        </div>
+        <div class="news-item">
+          <span class="news-date">[2024.10]</span>
+          Work on the salience network in pediatric BECTS-ESES published in
+          <span class="journal">Progress in Neuro-Psychopharmacology & Biological Psychiatry</span>.
+        </div>
+      </div>
+
+      <div class="card full">
+        <h2 class="section-title">Selected Publications</h2>
+        <ul class="pub-list">
+          <li>
+            <span class="pub-title">Frequency-Specific Functional Connectivity Patterns in ADHD</span><br>
+            <span class="journal">BMC Psychiatry</span>, 2025
+          </li>
+          <li>
+            <span class="pub-title">Salience Network in Pediatric BECTS-ESES</span><br>
+            <span class="journal">Progress in Neuro-Psychopharmacology & Biological Psychiatry</span>, 2024
+          </li>
+          <li>
+            <span class="pub-title">Default Mode Network and ADHD</span><br>
+            <span class="journal">International Journal of Clinical and Health Psychology</span>, 2023
+          </li>
+          <li>
+            <span class="pub-title">Insular Dynamic Functional Connectivity in ADHD</span><br>
+            <span class="journal">Frontiers in Neuroscience</span>, 2022
+          </li>
+          <li>
+            <span class="pub-title">Hippocampal Connectivity in Mood Disorders</span><br>
+            <span class="journal">Psychiatry Research: Neuroimaging</span>
+          </li>
+          <li>
+            <span class="pub-title">Low-Frequency Fluctuations in Epilepsy</span><br>
+            <span class="journal">Journal of Clinical Neuroscience</span>, 2024
+          </li>
+        </ul>
+      </div>
+
+      <div class="card full">
+        <h2 class="section-title">Licenses & Certifications</h2>
+        <ul class="cert-list">
+          <li>
+            <span class="cert-title">Hainan Free Trade Port (HFTP) Talent Certificate</span><br>
+            <span class="muted">Issued Sep 2025</span>
+          </li>
+          <li>
+            <span class="cert-title">High-Level Talent Certificate – Sanya Yazhou Bay</span><br>
+            <span class="muted">Issued Dec 2025</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer-note">
+      © Ahmed Ameen Fateh
     </div>
-
-    <div class="contact">
-      <strong>Email:</strong> Eng.ahmed.a.d@outlook.com<br>
-      <strong>Email:</strong> 997141@hainanu.edu<br>
-
-      [<a href="https://scholar.google.com/citations?user=CFpfmQkAAAAJ" target="_blank">Google Scholar</a>] &nbsp;
-      [<a href="https://github.com/ahmedfateh" target="_blank">GitHub</a>] &nbsp;
-      [<a href="https://www.researchgate.net/profile/Ahmed-Fateh" target="_blank">ResearchGate</a>] &nbsp;
-      [<a href="https://orcid.org/0000-0001-6126-274X" target="_blank">ORCID</a>] &nbsp;
-      [<a href="Ahmed_CV.pdf" target="_blank">CV</a>
-      <br>
-      <strong>Address:</strong> Sanya, Hainan, China
-    </div>
   </div>
-
-</div>
-<!-- ================= ABOUT ================= -->
-<div class="section">
-  <div class="section-title"> About Me</div>
-  <hr>
-
-  <div class="about-text">
-    <p>
-      Ahmed Ameen Fateh received his Ph.D. in Biomedical Engineering.
-      His research focuses on neuroimaging, resting-state fMRI,
-      machine learning, and computational psychiatry.
-    </p>
-
-    <p>
-      His work explores brain connectivity patterns in psychiatric
-      and neurological disorders, aiming to develop data-driven
-      diagnostic and predictive models.
-    </p>
-  </div>
-</div>
-<!-- ================= RESEARCH ================= -->
-<div class="section">
-  <div class="section-title"> Research Interests</div>
-  <hr>
-  <div class="about-text">
-    Neuroimaging, resting-state fMRI, dynamic functional connectivity,
-    machine learning in psychiatry, computational psychiatry,
-    ADHD, epilepsy, mood disorders, and brain connectivity analysis.
-  </div>
-</div>
-
-<!-- ================= PUBLICATIONS ================= -->
-<div class="section">
-  <div class="section-title"> Selected Publications</div>
-  <hr>
-
-  <ul class="news-list pub-list">
-    <li><b>Frequency-Specific Functional Connectivity Patterns in ADHD</b><br>
-    <em>BMC Psychiatry</em>, 2025</li>
-
-    <li><b>Salience Network in Pediatric BECTS-ESES</b><br>
-    <em>Progress in Neuro-Psychopharmacology</em>, 2024</li>
-
-    <li><b>Default Mode Network and ADHD</b><br>
-    <em>International Journal of Clinical and Health Psychology</em>, 2023</li>
-
-    <li><b>Insular Dynamic Functional Connectivity in ADHD</b><br>
-    <em>Frontiers in Neuroscience</em>, 2022</li>
-
-    <li><b>Hippocampal Connectivity in Mood Disorders</b><br>
-    <em>Psychiatry Research: Neuroimaging</em></li>
-
-    <li><b>Low-Frequency Fluctuations in Epilepsy</b><br>
-    <em>Journal of Clinical Neuroscience</em>, 2024</li>
-  </ul>
-</div>
-
-<!-- ================= CERTIFICATES ================= -->
-<div class="section">
-  <div class="section-title"> Licenses & Certifications</div>
-  <hr>
-
-  <ul class="news-list">
-    <li>
-      <b>Hainan Free Trade Port (HFTP) Talent Certificate</b><br>
-      Issued Sep 2025
-    </li>
-
-    <li>
-      <b>High-Level Talent Certificate – Sanya Yazhou Bay</b><br>
-      Issued Dec 2025
-    </li>
-  </ul>
-</div>
-
-
-
-</div>
 </body>
 </html>
