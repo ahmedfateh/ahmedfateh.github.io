@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Fateh</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #111;
+      font-family: "Times New Roman", Times, serif;
+      line-height: 1.35;
+    }
+
+    .container {
+      width: 1100px;
+      margin: 30px auto;
+    }
+
+    .top-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .profile-photo {
+      width: 210px;
+      height: auto;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .name-line {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .name-line a {
+      color: #0033cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .name-line a:hover {
+      text-decoration: underline;
+    }
+
+    .title {
+      font-size: 18px;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    .affiliation a {
+      color: #0033cc;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .affiliation a:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      margin-top: 22px;
+      font-size: 16px;
+    }
+
+    .contact a {
+      color: #0033cc;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-top: 18px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      color: #a52a2a;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .section hr {
+      border: none;
+      border-top: 1px solid #bdbdbd;
+      margin: 0 0 12px 0;
+    }
+
+    .news-list {
+      margin: 0;
+      padding-left: 34px;
+      font-size: 18px;
+    }
+
+    .news-list li {
+      margin-bottom: 14px;
+    }
+
+    .date {
+      color: #d62828;
+      font-weight: bold;
+    }
+
+    .readmore {
+      background: #d9d9d9;
+      color: #444;
+      padding: 10px 14px;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 12px 0 8px 0;
+    }
+
+    .about-text {
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .about-text p {
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 1150px) {
+      .container {
+        width: 92%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .top-section {
+        flex-direction: column;
+      }
+
+      .profile-photo {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="top-section">
+      <img src="profile.jpg" alt="Ahmed Fateh" class="profile-photo" />
+
+      <div class="profile-info">
+        <div class="name-line">
+          <a href="#">Ahmed Ameen Fateh</a>
+        </div>
+
+        <div class="title">Ph.D. | Research Fellow</div>
+
+        <div class="affiliation">
+          <a href="#">Department of Radiology</a><br />
+          <a href="#">Shenzhen Children’s Hospital, Shenzhen, China</a>
+        </div>
+
+        <div class="contact">
+          <strong>Email:</strong> your_email@example.com<br />
+          [<a href="#">Google Scholar</a>]
+          [<a href="#">GitHub</a>]
+          [<a href="#">ResearchGate</a>]
+          [<a href="cv.pdf" target="_blank">CV</a>]<br />
+          <strong>Address:</strong> Shenzhen, Guangdong, China
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">📅 News</div>
+      <hr />
+      <ul class="news-list">
+        <li>
+          <span class="date">[2025.02]</span>
+          Our paper on frequency-specific functional connectivity patterns in ADHD was published in
+          <em>BMC Psychiatry</em>.
+        </li>
+      </ul>
+
+      <div class="readmore">👉 Read More</div>
+
+      <ul class="news-list">
+        <li>
+          <span class="date">[2024.10]</span>
+          Our work on the salience network in pediatric BECTS-ESES was published in
+          <em>Progress in Neuro-Psychopharmacology & Biological Psychiatry</em>.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">😉 About Me</div>
+      <hr />
+      <div class="about-text">
+        <p>
+          Ahmed Ameen Fateh received the B.Sc. degree in Biomedical Engineering from the Lebanese
+          International University, Yemen, the M.Sc. degree in Biomedical Engineering from the
+          University of Electronic Science and Technology of China, and the Ph.D. degree in Biomedical
+          Engineering from the same institution.
+        </p>
+
+        <p>
+          He worked as a Research Fellow in the Department of Radiology at Shenzhen Children’s
+          Hospital, Shenzhen, China. His research focuses on neuroimaging, resting-state fMRI,
+          machine learning, dynamic functional connectivity, and computational psychiatry.
+        </p>
+
+        <p>
+          His current academic interests include brain connectivity analysis in psychiatric and
+          neurological disorders, the integration of neuroimaging with machine learning models, and
+          translational applications in mental health research.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
